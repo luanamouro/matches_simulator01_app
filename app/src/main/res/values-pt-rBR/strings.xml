@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="txt_simulate">Botão de simulação de partidas.</string>
+    <string name="cd_HomeTeam">Imagem do time Mandante.</string>
+    <string name="AwayTeam">Imagem Time de Fora.</string>
+    <string name="cd_AwayTeam">Imagem do Time de Fora.</string>
 </resources>
