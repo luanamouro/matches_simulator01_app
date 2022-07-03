@@ -1,4 +1,4 @@
-package me.dio.simulator01
+package me.dio.simulator01.domain.ui
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
