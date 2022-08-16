@@ -4,4 +4,5 @@
     <string name="cd_HomeTeam">Imagem do time Mandante.</string>
     <string name="AwayTeam">Imagem Time de Fora.</string>
     <string name="cd_AwayTeam">Imagem do Time de Fora.</string>
+    <string name="error_api">unexpected error</string>
 </resources>

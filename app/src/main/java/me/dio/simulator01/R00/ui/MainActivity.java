@@ -5,8 +5,11 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import java.util.List;
 
+import me.dio.simulator01.R;
 import me.dio.simulator01.R00.data.MatchesApi;
 import me.dio.simulator01.R00.domain.Match;
 import me.dio.simulator01.databinding.ActivityMainBinding;
@@ -49,12 +52,16 @@ public class MainActivity extends AppCompatActivity {
        matchesApi.getMatches().enqueue(new Callback<List<Match>>() {
            @Override
            public void onResponse(Call<List<Match>> call, Response<List<Match>> response) {
-
+                if (response.isSuccessful()){
+                    List<Match> matches = response.body();
+                }else{
+                    showErrorMessage();
+                }
            }
 
            @Override
            public void onFailure(Call<List<Match>> call, Throwable t) {
-
+               showErrorMessage();
            }
        });
     }
@@ -65,5 +72,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupFloatingActionButton() {
         //TODO: Criar evento de click e simulação de partidas.
+    }
+
+    private void showErrorMessage() {
+        Snackbar.make(binding.fabSimulate, R.string.error_api, Snackbar.LENGTH_LONG).show();
     }
 }
