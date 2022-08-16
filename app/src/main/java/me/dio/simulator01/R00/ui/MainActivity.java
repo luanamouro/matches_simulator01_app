@@ -5,6 +5,9 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import me.dio.simulator01.databinding.ActivityMainBinding;
+import retrofit2.Retrofit;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -17,9 +20,15 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        setupHttpClient();
         setupMatchesList();
         setupMatchesRefresh();
         setupFloatingActionButton();
+    }
+
+    private void setupHttpClient() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://luanamouro.github.io/matches_simulator01_api/")
     }
 
     private void setupMatchesList() {
