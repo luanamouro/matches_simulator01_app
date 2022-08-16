@@ -24,7 +24,7 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        MatchItemBinding binding = MatchItemBinding.inflate(layoutInflater);
+        MatchItemBinding binding = MatchItemBinding.inflate(layoutInflater, parent, false);
         return new ViewHolder(binding);
     }
 
@@ -32,12 +32,13 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Match match = matches.get(position);
 
-        holder.binding.
+        holder.binding.tvHomeTeamName.setText(match.getHomeTeam().getName());
+        holder.binding.tvAwayTeamName.setText(match.getAwayTeam().getName());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return matches.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
