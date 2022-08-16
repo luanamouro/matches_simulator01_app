@@ -1,4 +1,4 @@
-package me.dio.simulator01.domain;
+package me.dio.simulator01.R00.domain;
 
 public class Place {
     private String name;

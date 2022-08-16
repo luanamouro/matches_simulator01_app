@@ -7,7 +7,7 @@
 -->
 <full-backup-content>
     <!--
-   <include domain="sharedpref" path="."/>
-   <exclude domain="sharedpref" path="device.xml"/>
+   <include me.dio.simulator01.R00.domain="sharedpref" path="."/>
+   <exclude me.dio.simulator01.R00.domain="sharedpref" path="device.xml"/>
 -->
 </full-backup-content>

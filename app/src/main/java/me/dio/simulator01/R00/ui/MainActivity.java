@@ -1,12 +1,9 @@
-package me.dio.simulator01.domain.ui;
+package me.dio.simulator01.R00.ui;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import me.dio.simulator01.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
