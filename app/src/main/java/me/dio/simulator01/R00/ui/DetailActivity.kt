@@ -7,6 +7,10 @@ import me.dio.simulator01.databinding.ActivityDetailBinding
 
 class DetailActivity : AppCompatActivity() {
 
+    object Extras{
+        const val MATCH = "EXTRA_MATCH"
+    }
+
     private lateinit var binding: ActivityDetailBinding
     @SuppressLint("UseSupportActionBar")
     override fun onCreate(savedInstanceState: Bundle?) {

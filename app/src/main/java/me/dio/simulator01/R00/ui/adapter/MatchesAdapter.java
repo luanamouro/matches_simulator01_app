@@ -1,6 +1,7 @@
 package me.dio.simulator01.R00.ui.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import com.bumptech.glide.Glide;
 import java.util.List;
 
 import me.dio.simulator01.R00.domain.Match;
+import me.dio.simulator01.R00.ui.DetailActivity;
 import me.dio.simulator01.databinding.MatchItemBinding;
 
 public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.ViewHolder> {
@@ -51,7 +53,9 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.ViewHold
         }
 
         holder.itemView.setOnClickListener(view -> {
-
+            Intent intent = new Intent(context, DetailActivity.class);
+            intent.putExtra(DetailActivity.Extras.MATCH,match);
+            context.startActivity(intent);
         });
     }
 
